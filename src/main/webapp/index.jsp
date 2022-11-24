@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>SAN</title>
+<title>YELLAIAH</title>
 </head>
 <body>
-<h1 style="text_align=center">SAN</h1>
+<h1 style="text_align=center">YELLAIAH</h1>
       <form action="firstHomePage" method="get">
 <label>first number:</label>
 <input type="text" name="n1" />
