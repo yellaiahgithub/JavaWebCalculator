@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>SANDEEP</title>
+<title>SAND</title>
 </head>
 <body>
 <h1 style="text_align=center">Calculator</h1>
