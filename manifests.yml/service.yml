@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: your-app-service  # Replace 'your-app-service' with your desired service name
+spec:
+  selector:
+    app: your-app  # Replace 'your-app' with your app label used in the deployment
+  ports:
+    - protocol: TCP
+      port: 80  # Port exposed by the service (external traffic will be forwarded to this port)
+      targetPort: 8080  # Port on which the container is listening
+  type: LoadBalancer  # Use 'LoadBalancer' if you are on a cloud provider supporting external load balancers
