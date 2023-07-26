@@ -1,0 +1,25 @@
+name: Docker Build and Push
+
+on:
+  push:
+    branches:
+      - main # Change this to the branch you want to trigger the action on
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Login to Docker Hub
+      run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Build and Push Docker Image
+      env:
+        DOCKER_IMAGE_TAG: "my-docker-image:latest" # Change this to your desired image tag
+      run: |
+        docker build -t $DOCKER_IMAGE_TAG .
+        docker tag $DOCKER_IMAGE_TAG ${{ secrets.DOCKERHUB_USERNAME }}/$DOCKER_IMAGE_TAG
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/$DOCKER_IMAGE_TAG
