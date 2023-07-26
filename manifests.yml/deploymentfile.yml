@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: Javawebapp  # Replace 'your-app-container' with your desired container name
-        image: yellaiahdocker/my-docker-image  # Replace with your Docker Hub image
+        image: yellaiahdocker/my-docker-image-1  # Replace with your Docker Hub image
         ports:
         - containerPort: 8080  # Adjust the port number if your app runs on a different port
